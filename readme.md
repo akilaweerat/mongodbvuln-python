@@ -1,6 +1,6 @@
 
 What is this project about ?
-============================ 
+------------
 
 This web app is written in python and contains NoSQLi vulnerabilities. 
 
