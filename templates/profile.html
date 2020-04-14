@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>
+            Vulnerable Python App
+        </title>
+        <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet" />
+        <link href="{{ url_for('static', filename='login.css') }}" rel="stylesheet" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Vulnerable Python App</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+              <div class="btn-group-vertical pull-right">
+                <a href="/logout" class="btn btn-secondary active" role="button" aria-pressed="true">Log Out</a>
+               </div>              
+            </div>
+          </nav>
+
+          <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="#" crossorigin="anonymous">
+          <div class="container-fluid" style="margin-top:20px;">
+              <div class="row">
+                  <div class="col-md-3 ">
+                       <div class="list-group ">
+                        <a href="#" class="list-group-item list-group-item-action active">Dashboard</a>
+                        <a href="#" class="list-group-item list-group-item-action">User Management</a>
+                        <a href="#" class="list-group-item list-group-item-action">Used</a>
+                        <a href="#" class="list-group-item list-group-item-action">Enquiry</a>
+                        <a href="#" class="list-group-item list-group-item-action">Dealer</a>
+                        <a href="#" class="list-group-item list-group-item-action">Media</a>
+                        <a href="#" class="list-group-item list-group-item-action">Post</a>
+                        <a href="#" class="list-group-item list-group-item-action">Category</a>
+                        <a href="#" class="list-group-item list-group-item-action">New</a>
+                        <a href="#" class="list-group-item list-group-item-action">Comments</a>
+                        <a href="#" class="list-group-item list-group-item-action">Appearance</a>
+                        <a href="#" class="list-group-item list-group-item-action">Reports</a>
+                        <a href="#" class="list-group-item list-group-item-action">Settings</a>
+                        
+                        
+                      </div> 
+                  </div>
+                  <div class="col-md-9">
+                      <div class="card">
+                          <div class="card-body">
+                              <div class="row">
+                                  <div class="col-md-9 border-right">
+                                      <h3 style="color:black;">Manage Users</h3>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <form id="frm-search" class="form-inline my-2 my-lg-0">
+                                        <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search User" aria-label="Search">
+                                        <input name="managed_by" type="hidden" id="managed_by" value="{{username}}">
+                                        <button id="btn-search" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                    </form>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <table id="tbl-users" class="table table-hover">
+                                          <thead class="bg-light ">
+                                            <tr>
+                                              <th>
+                                                <div class="form-check-inline">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input" value="">
+                                                     </label>
+                                                 </div>
+                                              </th>  
+                                              <th>Username</th>
+                                              <th>Email</th>
+                                              <th>isActive</th>
+                                              <th>Managed By</th>
+                                              <th>Edit</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                          {% for user in users %}
+                                            <tr>
+                                              <td>
+                                                  <div class="form-check-inline">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input" value="">
+                                                     </label>
+                                                 </div>
+                                              </td>  
+                                              <td><a href="#"><small>{{ user.username }}</small></a></td>
+                                              <td><small>{{ user.email }}</small></td>
+                                              <td><small>{{ user.isActive }}</small></td>
+                                              <td><small>{{ user.managed_by }}</small></td>
+                                              <td><a href="#"><small>5</small></a></td>
+                                              <td>
+                                                  <a href="#"><i class="fa fa-pencil-square-o"></i></a>
+                                                  <a href="#"><i class="fa fa-eye"></i></a>
+                                                  <a href="#"><i class="fa fa-trash"></i></a>
+                                              </td>
+                                            </tr>
+                                          {% endfor %}
+                                          </tbody>
+                                        </table>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+        </body>
+        <script src="{{ url_for('static', filename='jquery.min.js') }}"> </script>
+        <script src="{{ url_for('static', filename='bootstrap.min.js') }}"> </script>
+        <script src="{{ url_for('static', filename='index.js') }}"> </script>
+</html>
