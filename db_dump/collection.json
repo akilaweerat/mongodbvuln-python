@@ -1,0 +1,11 @@
+{"_id":{"$oid":"58b3004750096fe66ad1f429"},"username":"admin","password":"p@ssw0rd","isActive":true,"managed_by":"0","email":"a@b.com"}
+{"_id":{"$oid":"5e915e748265a469e44d9fcc"},"username":"test12","password":"p@ssw0rd","isActive":true,"managed_by":"admin","email":"a@b.com"}
+{"_id":{"$oid":"5e915eb58265a469e44d9fcd"},"username":"user24","password":"p@ssw0rd","isActive":true,"managed_by":"admin","email":"a@b.com"}
+{"_id":{"$oid":"5e915eda8265a469e44d9fce"},"username":"test67","password":"p@ssw0rd","isActive":true,"managed_by":"test12","email":"a@b.com"}
+{"_id":{"$oid":"5e915ee98265a469e44d9fcf"},"username":"superadmin","password":"p@ssw0rd","isActive":true,"managed_by":"0","email":"a@b.com"}
+{"_id":{"$oid":"5e915efd8265a469e44d9fd0"},"username":"person123","password":"p@ssw0rd","isActive":true,"managed_by":"superadmin","email":"a@b.com"}
+{"_id":{"$oid":"5e915f428265a469e44d9fd1"},"username":"testuser435","password":"p@ssw0rd","isActive":true,"managed_by":"superadmin","email":"a@b.com"}
+{"_id":{"$oid":"5e915f4a8265a469e44d9fd2"},"username":"testuser123","password":"p@ssw0rd","isActive":true,"managed_by":"superadmin","email":"a@b.com"}
+{"_id":{"$oid":"5e915f538265a469e44d9fd3"},"username":"male34","password":"p@ssw0rd","isActive":true,"managed_by":"superadmin","email":"a@b.com"}
+{"_id":{"$oid":"5e915f5a8265a469e44d9fd4"},"username":"male35","password":"p@ssw0rd","isActive":true,"managed_by":"superadmin","email":"a@b.com"}
+{"_id":{"$oid":"5e915f688265a469e44d9fd5"},"username":"female11","password":"p@ssw0rd","isActive":true,"managed_by":"superadmin","email":"a@b.com"}

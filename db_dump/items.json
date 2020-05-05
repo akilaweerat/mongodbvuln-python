@@ -1,0 +1,5 @@
+{"_id":{"$oid":"5e861b3f82d8ee0a0420e9d4"},"item":"card","qty":15.0}
+{"_id":{"$oid":"5e861b5082d8ee0a0420e9d5"},"item":"rice","qty":40.0}
+{"_id":{"$oid":"5e861b5b82d8ee0a0420e9d6"},"item":"maze","qty":10.0}
+{"_id":{"$oid":"5e861b6d82d8ee0a0420e9d7"},"item":"dhal","qty":20.0}
+{"_id":{"$oid":"5e861b7682d8ee0a0420e9d8"},"item":"carrot","qty":50.0}
